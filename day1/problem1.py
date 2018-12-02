@@ -1,10 +1,10 @@
 def main():
     freq = 0
 
-    with open("freq.txt", "r+") as file:
+    with open("input.txt", "r+") as file:
         content = file.readlines()
         for line in content:
-            if line[0] == '+':
+            if line[:1] == '+':
                 freq = freq + int(line[1:])
             else:
                 freq = freq - int(line[1:])

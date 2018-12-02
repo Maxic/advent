@@ -5,7 +5,7 @@ def main():
     freq = 0
     freq_set = set()
 
-    with open("freq.txt", "r+") as file:
+    with open("input.txt", "r+") as file:
         content = itertools.cycle(file.readlines())
         while True:
             freq_set_length = freq_set.__len__()
