@@ -6,8 +6,6 @@ def main():
         claims = file.readlines()
 
     coordinates_list = []
-    max_xpos = 0
-    max_ypos = 0
     overlap_count = 0
 
     for claim in claims:
@@ -20,12 +18,6 @@ def main():
 
         # create coordinate list
         coordinates_list.append(get_coordinates(xpos, ypos, width, length))
-
-        # get boundaries
-        if xpos > max_xpos:
-            max_xpos = xpos
-        if ypos > max_ypos:
-            max_ypos = ypos
 
     # fill coordinates
     grid = [[0 for j in range(0, 1000)] for i in range(0, 1000)]
@@ -43,11 +35,6 @@ def main():
                 overlap_count += 1
 
     print(overlap_count)
-
-
-def print_grid(grid):
-    for list in grid:
-        print(list)
 
 
 def get_coordinates(xpos, ypos, width, length):
