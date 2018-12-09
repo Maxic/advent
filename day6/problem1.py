@@ -19,7 +19,7 @@ def main():
         grid[xpos][ypos] = coordinate_id
         coordinates[coordinate_id] = (xpos, ypos)
 
-    # fill grid with
+    # fill grid with coordinate_ids of closest coordinates. Or '.' if there are multiple
     for i in range(0, grid.__len__()):
         for j in range(0, grid[0].__len__()):
             distances = {}
@@ -58,10 +58,12 @@ def main():
                 else:
                     coordinate_area_size[grid[j][i]] += 1
 
+    # get biggest finite area
     max_area_size = 0
     for key in coordinate_area_size.keys():
         max_area_size = max(coordinate_area_size[key], max_area_size)
 
+    # ahem.. i should fix this...
     print(max_area_size+1)
 
 

@@ -7,6 +7,7 @@ def main():
 
     next_steps = {}
 
+    # create a dict with all prerequisites for each state
     for step in steps_raw:
         match = re.match(r'Step (.*) must be finished before step (.*) can begin', step.rstrip())
         first_state = match.group(1)
@@ -17,6 +18,7 @@ def main():
             next_steps[first_state] = set()
         next_steps[second_state].add(first_state)
 
+    # calculate order in which to visit the states
     solution = ''
     solution_length = next_steps.__len__()
     possible_states = set()
