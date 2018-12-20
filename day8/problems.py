@@ -1,6 +1,7 @@
 def main():
     with open("input.txt", "r+") as file:
-        content = file.readlines()
+        tree = file.readlines()
+    print(tree)
 
 
 if __name__ == '__main__':
