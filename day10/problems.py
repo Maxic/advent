@@ -1,5 +1,4 @@
 import re
-import time
 
 
 def main():
@@ -32,7 +31,6 @@ def main():
             grid = fill_grid(grid, stars)
 
             # print grid
-            time.sleep(1)
             print_grid(grid)
             converged = True
         elif converged:
