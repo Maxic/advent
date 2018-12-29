@@ -36,7 +36,6 @@ class Cart:
 
             if next_tile in ['^', '>', '<', 'v']:
                 self.state = 'crashed'
-                self.direction = 'X'
 
             return (self.x, self.y), self.direction, self.state
 
@@ -58,7 +57,6 @@ class Cart:
 
             if next_tile in ['^', '>', '<', 'v']:
                 self.state = 'crashed'
-                self.direction = 'X'
 
             return (self.x, self.y), self.direction, self.state
 
@@ -80,7 +78,6 @@ class Cart:
 
             if next_tile in ['^', '>', '<', 'v']:
                 self.state = 'crashed'
-                self.direction = 'X'
 
             return (self.x, self.y), self.direction, self.state
         else:
@@ -101,7 +98,6 @@ class Cart:
 
             if next_tile in ['^', '>', '<', 'v']:
                 self.state = 'crashed'
-                self.direction = 'X'
 
             return (self.x, self.y), self.direction, self.state
 
